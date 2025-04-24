@@ -18,7 +18,8 @@
         <img class="h-18 w-15 rounded-br-md mask-radial-from-pink-500 p-2" src="../assets/odalis.jpeg" alt="" srcset="">
         Odalis
       </button>
-      <div *ngIf="open" class="origin-top-right absolute right-0 mt-2 rounded-b-md shadow-2xs bg-cyan-900 ring-cyan-300 ring-2 ring-offset-transparent ring-opacity-s focus:outline-none">
+      <div *ngIf="open" (mouseleave)="closeDropdown()"
+      class="origin-top-right absolute right-0 mt-2 rounded-b-md shadow-2xs bg-cyan-900 ring-cyan-300 ring-2 ring-offset-transparent ring-opacity-s focus:outline-none">
         <div class="py-1">
           <a href="#" class="block px-4 py-2 text-sm text-pink-100 hover:bg-pink-900">Herramientas</a>
           <a href="#" class="block px-4 py-2 text-shadow-2xs text-sm text-red-100 hover:bg-red-900">Salir</a>
@@ -28,5 +29,18 @@
   </div>
 </header>
 
+<p></p>
+<div class="flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ...">
+  <img class="mx-auto block h-26 rounded-b-4xl sm:mx-0 sm:shrink-0 mask-radial-from-pink-900" src="../assets/odalis.jpeg" alt="" />
+  <div class="space-y-2 text-center sm:text-left">
+    <div class="space-y-0.5">
+      <p class="text-lg font-semibold text-black">Odalis Rea</p>
+      <p class="font-medium text-gray-500">Ingeniera de Software</p>
+    </div>
+    <button class="bg-cyan-100 border-cyan-600 border-4 text-cyan-600 hover:border-transparent hover:bg-pink-900 hover:text-pink-50 active:bg-pink-900 font-bold py-2 px-3">
+      Message
+    </button>
+  </div>
+</div>
 
 <router-outlet />

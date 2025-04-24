@@ -17,4 +17,10 @@ export class AppComponent {
     this.open = !this.open
     console.log(this.open)
   }
+
+  closeDropdown(){
+    setTimeout(() =>{
+      this.open = false;
+    },1000);
+  }
 }
